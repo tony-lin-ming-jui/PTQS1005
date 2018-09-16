@@ -1,0 +1,9 @@
+輸入時間將matplotlib 丟到網頁上
+
+覺得應該完美了 唯一缺點 重整會跌加需要處理  (已修正)
+
+
+
+ Anaconda3\Lib\site-packages\matplotlib\mpl-data目錄，用記事本開啟matplotlibrc
+
+搜尋到font.family，將後面改為 Microsoft JhengHei，存檔 重新執行python軟體

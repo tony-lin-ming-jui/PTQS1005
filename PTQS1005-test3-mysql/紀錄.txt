@@ -1,0 +1,28 @@
+我的檔案位置:C:\AppServ\MySQL\data
+在mysql創一個數據庫-> create database 名稱 charset utf8; 這裡的名稱: db_demo1
+use db_demo1; ->檔案名稱 這個就像哪個數據庫檔案的意思 使用哪個數據庫檔案就切換哪個
+show tables;
+
+desc (table的名稱); ->就可以顯示數據庫類型 像是int string 或Text之類的
+
+select * from (數據庫的名稱); -> 顯示數據庫
+
+use db_demo2;
+
+show create table (數據庫的名稱);
+
+drop table (表的名稱); 刪除表單
+
+mysql設置遠端連線許可
+
+GRANT ALL PRIVILEGES ON *.* TO 'USERNAME'@'IP' IDENTIFIED BY 'password';
+我的設定是:  GRANT ALL PRIVILEGES ON PTQS1005.ptqs TO root@'%' IDENTIFIED BY '1qaz1qaz'; 
+GRANT ALL PRIVILEGES ON database.table TO 'username'@'ip' IDENTIFIED BY 'password';
+FLUSH PRIVILEGES;  <-接著執行這句話
+
+database是數據庫名，如果全部用' ' 
+table是具體的表明，如果是全部的表用' ' 
+username是要賦予權限的用戶名
+ip是賦予可以用這個用戶進行遠程訪問的ip地址，可以是具體的ip，如果所有ip都可以訪問用'%' 
+password是用戶密碼
+
